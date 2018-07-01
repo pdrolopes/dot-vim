@@ -1,0 +1,6 @@
+[submodule "pack/plugins/start/ctrlp.vim"]
+	path = pack/plugins/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "pack/plugins/opt/onedark.vim"]
+	path = pack/plugins/opt/onedark.vim
+	url = https://github.com/joshdick/onedark.vim
