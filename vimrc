@@ -26,6 +26,7 @@ set path+=**                       " Find recursive when use command :find or :t
 set wildignore+=**/node_modules/** " Excluding folder for :find and :tabfind commands
 set exrc                           " Load current folder .vimrc config file
 set secure                         " Prevent :autocmd files in current folder config file
+set encoding=utf-8
 
 set background=dark
 
@@ -35,6 +36,9 @@ filetype plugin indent on
 
 " Ctrlp .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" ALE code checker
+let g:ale_lint_on_text_changed = 'never'
 
 " Onedark section
 packadd! onedark.vim
@@ -55,3 +59,4 @@ endif
 let g:onedark_termcolors = 256
 colorscheme onedark
 " End onedark section
+let g:vue_disable_pre_processors=1
