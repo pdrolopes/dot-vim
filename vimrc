@@ -40,7 +40,12 @@ filetype plugin indent on
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " ALE code checker
-let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_text_changed = 'never'
+
+" NERD Tree
+nnoremap <C-n> :NERDTreeToggle<CR>
+" vim-test
+let test#strategy = "vimux"
 
 " Onedark section
 packadd! onedark.vim
