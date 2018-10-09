@@ -24,13 +24,14 @@ set display+=lastline              " Show last line much as possible
 set guioptions-=T                  " GUI without toolbar
 set path+=**                       " Find recursive when use command :find or :tabfind
 set wildignore+=**/node_modules/** " Excluding folder for :find and :tabfind commands
+set directory=~/tmp,/var/tmp,/tmp  " Save .swp file in temporary directory
 set exrc                           " Load current folder .vimrc config file
 set secure                         " Prevent :autocmd files in current folder config file
 set encoding=utf-8
 set splitbelow                     " Always create splits below or to the right
 set splitright                     " Always create splits below or to the right
-
 set background=dark
+
 
 syntax enable
 filetype plugin indent on
@@ -44,8 +45,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 " NERD Tree
 nnoremap <C-n> :NERDTreeToggle<CR>
+"
 " vim-test
-let test#strategy = "vimux"
+let test#strategy = "dispatch"
 
 " Onedark section
 packadd! onedark.vim
@@ -60,3 +62,4 @@ let g:onedark_termcolors = 256
 colorscheme onedark
 " End onedark section
 let g:vue_disable_pre_processors=1
+
