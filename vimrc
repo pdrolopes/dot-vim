@@ -30,7 +30,7 @@ set secure                         " Prevent :autocmd files in current folder co
 set encoding=utf-8
 set splitbelow                     " Always create splits below or to the right
 set splitright                     " Always create splits below or to the right
-set background=dark
+set background=light
 
 
 syntax enable
@@ -43,11 +43,23 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " ALE code checker
 " let g:ale_lint_on_text_changed = 'never'
 
+" Vue syntax color bug
+autocmd FileType vue syntax sync fromstart
+
 " NERD Tree
 nnoremap <C-n> :NERDTreeToggle<CR>
 "
 " vim-test
 let test#strategy = "dispatch"
+
+"Subtle solo theme
+" packadd! subtle_solo
+" colorscheme subtle_light
+" let g:indentLine_char = '¦'
+
+"One theme
+packadd! vim-one
+colorscheme one
 
 " Onedark section
 packadd! onedark.vim
@@ -59,7 +71,7 @@ if (has("termguicolors"))
 endif
 
 let g:onedark_termcolors = 256
-colorscheme onedark
+" colorscheme onedark
 " End onedark section
 let g:vue_disable_pre_processors=1
 

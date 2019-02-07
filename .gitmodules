@@ -49,3 +49,6 @@
 [submodule "pack/plugins/start/vim-dispatch"]
 	path = pack/plugins/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
+[submodule "pack/plugins/opt/vim-one"]
+	path = pack/plugins/opt/vim-one
+	url = https://github.com/rakr/vim-one
