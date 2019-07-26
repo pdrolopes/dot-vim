@@ -30,7 +30,7 @@ set secure                         " Prevent :autocmd files in current folder co
 set encoding=utf-8
 set splitbelow                     " Always create splits below or to the right
 set splitright                     " Always create splits below or to the right
-set background=light
+set background=dark
 
 
 syntax enable
@@ -41,6 +41,10 @@ filetype plugin indent on
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " ALE code checker
+let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'vue': ['eslint']}
+" let g:ale_fix_on_save = 1
+
+nnoremap <leader>f :ALEFix<CR>
 " let g:ale_lint_on_text_changed = 'never'
 
 " Vue syntax color bug
@@ -74,4 +78,3 @@ let g:onedark_termcolors = 256
 " colorscheme onedark
 " End onedark section
 let g:vue_disable_pre_processors=1
-
